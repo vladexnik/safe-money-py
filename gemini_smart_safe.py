@@ -24,13 +24,13 @@ class Safe:
         error = self.__verify_pin(pin)
         if error:
             return error
-        self.__initial_money += self.amount
+        self.__initial_money += amount
     
     def withdraw(self, pin, amount): # снимает деньги, если пинкод верный
         error = self.__verify_pin(pin)
         if error:
             return error
-        self.__initial_money -= self.amount   
+        self.__initial_money -= amount   
      
     @classmethod 
     def create_default_safe(cls): # класс принимает себя как аргумент и создает объект своего класса
@@ -69,4 +69,6 @@ class Safe:
 my_safe = Safe('1234', 5000)
 print(my_safe.add_note('1234', 'чюпеп', 'я скебоб'))
 print(my_safe.get_note('1234', 'чюпеп'))
+print(my_safe.withdraw('1234', 500))
+print(my_safe.get_balance('1234'))
 

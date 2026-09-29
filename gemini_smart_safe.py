@@ -59,11 +59,6 @@ class Safe:
     def __str__(self): # магический метод, возвращает данные про объект
         return f"Сейф защищен пин-кодом, баланс: {self.__initial_money} руб."
 
-    def get_history(self, pin):
-        error = self.__verify_pin(pin)
-        if error:
-            return error
-        return self.__history
     
 
 my_safe = Safe('1234', 5000)

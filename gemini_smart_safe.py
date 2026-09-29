@@ -67,3 +67,4 @@ print(my_safe.get_note('1234', 'чюпеп'))
 print(my_safe.withdraw('1234', 500))
 print(my_safe.get_balance('1234'))
 
+666
